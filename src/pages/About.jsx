@@ -5,7 +5,7 @@ function About() {
         
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
+            <h2 className="text-2xl font-bold mb-4 text-black">Our Mission</h2>
             <p className="text-gray-700 mb-4">
               WeatherApp provides real-time weather information and forecasts for locations worldwide.
               With features like current weather conditions, 5-day forecasts, and interactive weather maps,
@@ -14,7 +14,7 @@ function About() {
           </section>
   
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Features</h2>
+            <h2 className="text-2xl font-bold mb-4 text-black">Features</h2>
             <ul className="list-disc list-inside text-gray-700">
               <li>Real-time weather data</li>
               <li>5-day weather forecasts</li>
@@ -25,7 +25,7 @@ function About() {
           </section>
   
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Powered By</h2>
+            <h2 className="text-2xl font-bold mb-4 text-black">Powered By</h2>
             <p className="text-gray-700">
               This application uses the OpenWeatherMap API for weather data and forecasts.
               We're grateful for their comprehensive weather data services that make this application possible.
@@ -33,7 +33,7 @@ function About() {
           </section>
   
           <section>
-            <h2 className="text-2xl font-bold mb-4">Contact</h2>
+            <h2 className="text-2xl font-bold mb-4 text-black">Contact</h2>
             <p className="text-gray-700">
               For support or inquiries, please reach out to us at:
               <br />
