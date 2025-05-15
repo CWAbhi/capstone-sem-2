@@ -7,13 +7,13 @@ import "slick-carousel/slick/slick-theme.css";
 
 function WeatherMaps() {
   const [mapType, setMapType] = useState('temp_new');
-  const apiKey = '1234567890abcdef1234567890abcdef';
+  const apiKey = 'ea0e35a282b730fef857b1fcef36b2fa';
 
   const mapTypes = [
-    { id: 'temp_new', name: 'Temperature', icon: WiDaySunny, image: 'https://images.pexels.com/photos/2931915/pexels-photo-2931915.jpeg' },
-    { id: 'precipitation_new', name: 'Precipitation', icon: WiRain, image: 'https://images.pexels.com/photos/1529360/pexels-photo-1529360.jpeg' },
-    { id: 'wind_new', name: 'Wind Speed', icon: WiStrongWind, image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg' },
-    { id: 'clouds_new', name: 'Clouds', icon: WiCloudy, image: 'https://images.pexels.com/photos/3742711/pexels-photo-3742711.jpeg' }
+    { id: 'temp_new', name: 'Temperature', icon: WiDaySunny},
+    { id: 'precipitation_new', name: 'Precipitation', icon: WiRain},
+    { id: 'wind_new', name: 'Wind Speed', icon: WiStrongWind},
+    { id: 'clouds_new', name: 'Clouds', icon: WiCloudy}
   ];
 
   const settings = {
