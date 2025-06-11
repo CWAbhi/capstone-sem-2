@@ -45,12 +45,12 @@ function Home() {
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8"
+      className="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-gray-800 dark:text-white"
     >
       <motion.h1 
         initial={{ y: -20 }}
         animate={{ y: 0 }}
-        className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center text-white"
+        className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center"
       >
         Check Current Weather
       </motion.h1>
@@ -68,9 +68,9 @@ function Home() {
             value={city}
             onChange={(e) => setCity(e.target.value)}
             placeholder="Enter city name"
-            className="flex-1 p-3 rounded-lg input-glass focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="flex-1 p-3 rounded-lg input-glass bg-white dark:bg-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
-          <button type="submit" className="gradient-button px-6 py-3 rounded-lg font-semibold w-full sm:w-auto">
+          <button type="submit" className="gradient-button px-6 py-3 rounded-lg font-semibold w-full sm:w-auto text-white dark:text-white">
             Search
           </button>
         </div>
@@ -80,7 +80,7 @@ function Home() {
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="text-red-300 text-center mb-4"
+          className="text-red-500 dark:text-red-400 text-center mb-4"
         >
           {error}
         </motion.div>
@@ -90,7 +90,7 @@ function Home() {
         <motion.div 
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          className="weather-card rounded-xl p-4 sm:p-6 md:p-8"
+          className="weather-card rounded-xl p-4 sm:p-6 md:p-8 bg-white dark:bg-gray-800 shadow-md"
         >
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">{weather.name}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
@@ -122,13 +122,15 @@ function Home() {
           transition={{ delay: 0.3 }}
           className="mt-6 sm:mt-8"
         >
-          <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-center sm:text-left">Recent Searches</h3>
+          <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-center sm:text-left">
+            Recent Searches
+          </h3>
           <div className="flex flex-wrap justify-center sm:justify-start gap-2">
             {recentSearches.map((searchCity, index) => (
               <motion.button
                 key={index}
                 onClick={() => fetchWeather(searchCity)}
-                className="glass-effect px-3 sm:px-4 py-2 rounded-lg hover:bg-white/20 transition-colors duration-300"
+                className="glass-effect px-3 sm:px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-white/10 transition-colors duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

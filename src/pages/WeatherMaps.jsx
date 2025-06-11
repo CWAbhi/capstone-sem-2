@@ -10,10 +10,10 @@ function WeatherMaps() {
   const apiKey = 'ea0e35a282b730fef857b1fcef36b2fa';
 
   const mapTypes = [
-    { id: 'temp_new', name: 'Temperature', icon: WiDaySunny},
-    { id: 'precipitation_new', name: 'Precipitation', icon: WiRain},
-    { id: 'wind_new', name: 'Wind Speed', icon: WiStrongWind},
-    { id: 'clouds_new', name: 'Clouds', icon: WiCloudy}
+    { id: 'temp_new', name: 'Temperature', icon: WiDaySunny },
+    { id: 'precipitation_new', name: 'Precipitation', icon: WiRain },
+    { id: 'wind_new', name: 'Wind Speed', icon: WiStrongWind },
+    { id: 'clouds_new', name: 'Clouds', icon: WiCloudy }
   ];
 
   const settings = {
@@ -33,12 +33,12 @@ function WeatherMaps() {
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="max-w-4xl mx-auto"
+      className="max-w-4xl mx-auto text-gray-900 dark:text-white"
     >
       <motion.h1 
         initial={{ y: -20 }}
         animate={{ y: 0 }}
-        className="text-4xl font-bold mb-8 text-center text-white"
+        className="text-4xl font-bold mb-8 text-center"
       >
         Weather Maps
       </motion.h1>
@@ -56,7 +56,9 @@ function WeatherMaps() {
               key={type.id}
               onClick={() => setMapType(type.id)}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg transition-all duration-300 ${
-                mapType === type.id ? 'gradient-button text-white' : 'glass-effect hover:bg-white/20'
+                mapType === type.id 
+                  ? 'gradient-button text-white' 
+                  : 'glass-effect bg-white/30 dark:bg-white/10 hover:bg-white/20 dark:hover:bg-white/20 text-gray-900 dark:text-white'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -83,8 +85,8 @@ function WeatherMaps() {
             opacity: 0.3
           }}
         />
-        
-        <div className="weather-card rounded-xl overflow-hidden relative">
+
+        <div className="weather-card bg-white dark:bg-gray-900 rounded-xl overflow-hidden relative shadow-lg">
           <Slider {...settings}>
             {[2, 3, 4].map((zoom) => (
               <div key={zoom} className="p-4">
@@ -97,7 +99,7 @@ function WeatherMaps() {
                     alt={`Weather map - ${mapType}`}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 glass-effect opacity-30" />
+                  <div className="absolute inset-0 glass-effect bg-white/30 dark:bg-white/10" />
                 </div>
                 <motion.div 
                   initial={{ y: 20, opacity: 0 }}
@@ -105,7 +107,7 @@ function WeatherMaps() {
                   className="text-center mt-4"
                 >
                   <h3 className="text-xl font-semibold">{selectedMap.name} Map</h3>
-                  <p className="text-sm text-blue-200">Zoom Level: {zoom}</p>
+                  <p className="text-sm text-blue-600 dark:text-blue-300">Zoom Level: {zoom}</p>
                 </motion.div>
               </div>
             ))}
@@ -117,9 +119,9 @@ function WeatherMaps() {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4 }}
-        className="mt-8 text-center text-gray-200"
+        className="mt-8 text-center text-gray-700 dark:text-gray-300"
       >
-        <p>Data provided by OpenWeatherMapAPI . Maps are updated every 3 hours.</p>
+        <p>Data provided by OpenWeatherMap API. Maps are updated every 3 hours.</p>
       </motion.div>
     </motion.div>
   );
