@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
+import ForecastAlert from '../components/ForecastAlert';
 
 function Forecast() {
   const [city, setCity] = useState('');
@@ -87,6 +88,10 @@ function Forecast() {
               </motion.div>
             ))}
         </div>
+      )}
+
+      {forecast && (
+        <ForecastAlert forecast={forecast} />
       )}
     </div>
   );

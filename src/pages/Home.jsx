@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import { WiHumidity, WiStrongWind, WiThermometer } from 'react-icons/wi';
+import WeatherAlert from '../components/WeatherAlert';
 
 function Home() {
   const [city, setCity] = useState('');
@@ -113,6 +114,10 @@ function Home() {
             </div>
           </div>
         </motion.div>
+      )}
+
+      {weather && (
+        <WeatherAlert weather={weather} />
       )}
 
       {recentSearches.length > 0 && (
