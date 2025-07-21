@@ -1,12 +1,69 @@
-# React + Vite
+# 🌤️ Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern weather application that allows users to search for any city and get real-time weather information. Built using **HTML**, **JavaScript**, **Tailwind CSS**, and **Vite**.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+##  Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-  Search for any city to get weather data
+-  Displays temperature, humidity, and weather condition
+-  Real-time API fetch using OpenWeatherMap
+-  Beautiful and responsive UI with Tailwind CSS
+-  Fast development setup with Vite
+
+---
+
+## ⚙️ Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/weather-app.git
+   cd weather-app
+   
+Install dependencies
+
+npm install
+
+Run the development server
+
+npm run dev
+
+---
+
+##  Technologies Used
+
+- **HTML** – Structure of the webpage  
+- **JavaScript** – Logic and API handling  
+- **Tailwind CSS** – Utility-first styling  
+- **OpenWeatherMap API** – Weather data provider  
+- **Vite** – Lightning-fast dev server and build tool  
+
+---
+
+API Reference
+Using OpenWeatherMap API:
+
+Base URL: https://api.openweathermap.org/data/2.5/weather
+
+Required parameters:
+
+q: City name
+
+appid: Your API key
+
+units=metric: For temperature in Celsius
+
+Sign up and get your free API key here: https://openweathermap.org/api
+
+## Acknowledgements
+
+Tailwind CSS
+
+OpenWeatherMap
+
+Vite
+
+## Made with ❤️ by Abhijeet Dey
+
